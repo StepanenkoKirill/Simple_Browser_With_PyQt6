@@ -7,3 +7,9 @@ class brouser(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("CoolBroUSER")
+
+        self.web_window = QWebEngineView(self)
+        self.web_window.load(QUrl("https://github.com/StepanenkoKirill"))
+
+        self.address_str = QLineEdit(self)
+        self.address_str.returnPressed.connect(self.loader)
