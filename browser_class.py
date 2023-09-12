@@ -25,11 +25,15 @@ class brouser(QWidget):
 
         self.layout = QVBoxLayout(self)
         self.button_layout = QHBoxLayout(self)
+        self.address_layout = QHBoxLayout(self)
+
+        self.address_layout.addWidget(self.address_str)
 
         self.button_layout.addWidget(self.prev_butt)
         self.button_layout.addWidget(self.next_butt)
         self.button_layout.addWidget(self.search_butt)
 
+        self.layout.addLayout(self.address_layout)
         self.layout.addLayout(self.button_layout)
         self.layout.addWidget(self.web_window)
 
