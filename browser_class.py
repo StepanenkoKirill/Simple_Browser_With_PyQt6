@@ -7,6 +7,8 @@ class brouser(QWidget):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("CoolBroUSER")
+        self.setFixedWidth(500)
+        self.setFixedHeight(500)
 
         self.web_window = QWebEngineView(self)
         self.web_window.load(QUrl("https://github.com/StepanenkoKirill"))
